@@ -1,0 +1,17 @@
+.details > .spinner-border {
+  top: 61%;
+  position: absolute;
+  left: 50%;
+  height: 3rem;
+  width: 3rem;
+  font-size: 200;
+}
+
+.address {
+  font-size: 20px;
+  color: rgb(125, 121, 123);
+}
+
+.details  .c-image {
+  height: 50vh;
+}

@@ -1,0 +1,74 @@
+.header-div {
+  background: #f3f3f3;
+}
+
+.filters-applied-div {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  padding: 0px;
+}
+
+.filters-applied-div > .filter-item  {
+  border-right: 1px solid grey;
+  padding: 10px;
+}
+
+.filter-item > input {
+  width: 100%;
+}
+
+.hotel {
+  padding: 5px;
+  margin: 0.5rem 0rem;
+}
+
+
+.filters-applied-div > .filter-item:last-child {
+  border-right: none;
+}
+
+@media (max-width: 768px) {
+  .filters-applied-div > .filter-item:first-child {
+    border-right: none;
+  }
+}
+
+.hotel-details {
+  padding: 10px;
+}
+
+.hotel-details > .row {
+  margin: 0px;
+}
+
+.hotels-list > .spinner-border {
+  top: 61%;
+  position: absolute;
+  left: 50%;
+  height: 3rem;
+  width: 3rem;
+  font-size: 200;
+}
+
+.address {
+  font-size: 12px;
+  color: rgb(125, 121, 123);
+}
+
+.container {
+  margin-top: 5%;
+}
+
+.search-filter {
+  padding: 0px;
+  margin: 0px 10px;
+  min-height: 70vh;
+  box-shadow: 0 0 1px hsla(0,0%,40%,.6);
+}
+
+.search-filter .header-div {
+  padding: 10px 20px;
+}
+
+
