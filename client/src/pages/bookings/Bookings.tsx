@@ -54,7 +54,7 @@ class Bookings extends React.Component<Props, State> {
     }
 
     const header = keys.map((key, index) => {
-      return (<th scope="col" key={index}>key</th>)
+      return (<th scope="col" key={index}>{key}</th>)
     });
 
     const bookings = this.state.bookings && this.state.bookings.map((booking, index) => {
