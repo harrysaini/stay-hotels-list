@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface Props {
   hotels: any[],
@@ -6,13 +7,15 @@ interface Props {
 }
 
 const prepareHotelsListJSX = (hotels: any[]) => {
-  const jsx = hotels.map((hotel) => {
+  const jsx = hotels.map((hotel, index) => {
     return (
-      <div className="col-12 col-md-6 col-lg-4">
+      <div key={index}className="col-12 col-md-6 col-lg-4">
         <div className="hotel">
           <div className="row">
             <div className="col-6 col-md-12 p-0">
-              <img className="img-fluid" alt="" src={hotel._pictures[0] && hotel._pictures[0].url} />
+              <Link to={'details/'+ index}>
+                <img className="img-fluid" alt="" src={hotel._pictures[0] && hotel._pictures[0].url} />
+              </Link>
             </div>
             <div className="col-6 col-md-12 p-0">
               <div className="hotel-details">

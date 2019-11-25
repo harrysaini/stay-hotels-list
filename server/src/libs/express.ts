@@ -2,13 +2,12 @@ import express, { NextFunction, Request, Response, Router } from 'express';
 import * as path from 'path';
 import apiRouter from '../routes';
 import cors from 'cors';
-import './passport-jwt';
 
 const app: express.Application = express();
 
 app.use(cors());
 
-const port: string | number  = process.env.PORT || '3000';
+const port: string | number  = process.env.PORT || '5000';
 
 app.set('port', port);
 

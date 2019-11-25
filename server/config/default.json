@@ -3,7 +3,7 @@
     "host": "localhost",
     "username": "postgres",
     "password": "root",
-    "database": "esp-game"
+    "database": "stay-uncle"
   },
   "jwtSecret": "add_secret_here"
 }

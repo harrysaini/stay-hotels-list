@@ -10,6 +10,8 @@ interface State extends Record<inputs, string> {
   hotel?: any;
   loading: boolean;
   errorMessage: string;
+  bookingButtonDisabled: boolean,
+  bookingText: string
 }
 
 interface Params {
@@ -25,6 +27,8 @@ class Details extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
+      bookingButtonDisabled: false,
+      bookingText: 'Book Now',
       errorMessage: '',
       loading: true,
       name: '',
@@ -79,10 +83,33 @@ class Details extends React.Component<Props, State> {
 
   }
 
-  bookHotel = () => {
+  bookHotel = async () => {
     try {
       this.validateFields();
+      const dataObj = {
+        hotel: this.state.hotel.name,
+        city: this.state.city,
+        name: this.state.name,
+        email: this.state.email,
+        phone: this.state.phone,
+        date: this.state.date,
+        slot: this.state.slot
+      };
+      this.setState({
+        bookingButtonDisabled: true
+      });
+
+      const booking = await HotelService.bookHotel(dataObj);
+      alert('Booking done');
+      this.setState({
+        bookingButtonDisabled: true,
+        bookingText: 'Booked'
+      });
+
     } catch(e) {
+      this.setState({
+        bookingButtonDisabled: false
+      });
       this.showErrorMessage(e);
     }
   }
@@ -240,7 +267,8 @@ class Details extends React.Component<Props, State> {
               type="button"
               className="btn btn-primary btn-block"
               onClick={this.bookHotel}
-              >Book Now</button>
+              disabled={this.state.bookingButtonDisabled}
+              >{this.state.bookingText}</button>
 
             <br></br>
             <br></br>
