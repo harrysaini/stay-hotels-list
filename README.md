@@ -1,4 +1,4 @@
-# esp-game
+# stay-hotel
 
 Built using
 
@@ -24,23 +24,3 @@ Built using
 4. run command `npm start`
 
 
-### features
-
-1. Added game play as given in assignment
-2. Added auth using Json web tokens 
-
-
-### assumptions
-1. Game is not real time i.e first one user plays then second user
-2. 4 secondary images for each primary image
-3. user can select as many options
-
-### what can be improved
-1. Real time gaming through sockets
-2. Password encryption in db
-3. More info about user
-4. Better UI
-
-
-Deployed on heroku
-link: https://esp-game.herokuapp.com/game
